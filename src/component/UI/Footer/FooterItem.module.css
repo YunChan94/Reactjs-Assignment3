@@ -1,0 +1,9 @@
+.footer_item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer_item li a {
+  color: grey;
+  text-decoration: none;
+}

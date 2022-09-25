@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 5% 10%;
+}
+
+.footer {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+}
