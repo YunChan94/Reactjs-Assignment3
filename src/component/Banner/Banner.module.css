@@ -1,0 +1,21 @@
+.container {
+  background-image: url("../../../public/Images/banner1.jpg");
+  background-size: cover;
+  padding: 10% 5%;
+}
+
+.banner {
+  width: 60%;
+  color: rgba(61, 60, 90, 255);
+}
+
+.banner p {
+  font-style: italic;
+}
+
+.banner button {
+  background-color: #383838;
+  color: white;
+  font-style: italic;
+  cursor: pointer;
+}
