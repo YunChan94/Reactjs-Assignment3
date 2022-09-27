@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+}
+
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  font-style: italic;
+  background-color: #f8f9fa;
+  padding: 5%;
+}
+
+.service h5 {
+  color: rgba(61, 60, 90, 255);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  font-size: 80%;
+  margin: 0;
+}
+
+.slogan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-style: italic;
+  padding: 5% 0;
+}
+
+.sloganItem {
+  width: 40%;
+}
+
+.sloganItem h4 {
+  color: rgba(61, 60, 90, 255);
+  margin-bottom: 0.5rem;
+}
+
+.sloganItem p {
+  font-size: 80%;
+  margin: 0;
+}
+
+.register input {
+  padding: 0.5rem;
+}
+
+.register button {
+  padding: 0.5rem;
+  background-color: #383838;
+  color: white;
+  cursor: pointer;
+}

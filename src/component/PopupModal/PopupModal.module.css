@@ -1,0 +1,38 @@
+.popup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup div {
+  width: 50%;
+}
+
+.popup img {
+  width: 100%;
+}
+
+.closeBtn {
+  border: none;
+  position: fixed;
+  background-color: white;
+  text-align: right;
+  right: 3%;
+  cursor: pointer;
+}
+
+.decs p {
+  color: #bcc2d8;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.viewDetailBtn {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+  background-color: #383838;
+  color: white;
+  cursor: pointer;
+  margin-top: 3%;
+}

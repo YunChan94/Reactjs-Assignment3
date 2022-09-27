@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+
+import AnotherInfor from "../component/AnotherInfor/AnotherInfor";
 import Banner from "../component/Banner/Banner";
 import Categories from "../component/Categories/Categories";
-import ProductsList from "../component/ProductsList/ProductsList";
+import TrendingProducts from "../component/TrendingProducts/TrendingProducts";
+
 const HomePage = () => {
   return (
     <div>
       <Banner />
       <Categories />
-      <ProductsList />
+      <TrendingProducts />
+
+      <AnotherInfor />
     </div>
   );
 };
