@@ -5,28 +5,45 @@
 
 .container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .productRender {
   width: 70%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .searchForm {
   margin-top: 0;
   width: 100%;
-  height: 5%;
+  height: 3%;
   display: flex;
   justify-content: space-between;
   padding: 5%;
 }
 
-.searchForm input {
-  padding: 1%;
+.changePage {
+  width: 100%;
+  margin-right: 0;
+}
+.changePage p {
+  text-align: right;
 }
 
 .Btn {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 5%;
+  padding-right: 10%;
+  gap: 2%;
+}
+
+.Btn button {
+  background-color: white;
+  padding: 1%;
+}
+
+.Btn button:hover {
+  background-color: grey;
 }

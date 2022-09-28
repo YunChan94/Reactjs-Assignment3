@@ -7,7 +7,7 @@ import ProductList from "../component/ProductList/ProductList";
 const ShopPage = () => {
   // Lấy dữ liệu từ server
   const [data, setData] = useState([]);
-
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch(
       "https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74"
@@ -17,15 +17,17 @@ const ShopPage = () => {
   }, []);
   console.log("data", data);
 
-  let productByCategory = [];
+  let productByCategory;
   // Lấy dữ liệu categories
   const getCategoryHandler = (category) => {
     //Trường hợp chọn all thì sẽ hiển thị đầy đủ product
     if (category === "all") {
       productByCategory = data;
+      setProducts(productByCategory);
     } else {
       // Lọc product dựa trên category
       productByCategory = data.filter((item) => item.category === category);
+      setProducts(productByCategory);
     }
     console.log("productByCategory", productByCategory);
   };
@@ -44,11 +46,14 @@ const ShopPage = () => {
               <option>Default sorting</option>
             </select>
           </div>
-          <ProductList dataByCategory={productByCategory} />
-          <div className={classes.Btn}>
-            <button href="#" id="btn-prev">{`<<`}</button>
-            <a>1</a>
-            <button>{`>>`}</button>
+          <ProductList dataByCategory={products} />
+          <div className={classes.changePage}>
+            <div className={classes.Btn}>
+              <button href="#">{`<<`}</button>
+              <span>1</span>
+              <button href="#">{`>>`}</button>
+            </div>
+            <p>Showing 1-9 of 9 results</p>
           </div>
         </div>
       </div>

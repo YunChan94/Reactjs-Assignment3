@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import AnotherInfor from "../component/AnotherInfor/AnotherInfor";
 import Banner from "../component/Banner/Banner";

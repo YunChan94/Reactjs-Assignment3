@@ -1,26 +1,48 @@
 .container {
-  width: 70%;
+  width: 100%;
+}
+
+.container img:hover {
+  opacity: 1;
+  -webkit-animation: flash 1s;
+  animation: flash 1s;
 }
 
 .productsList {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2%;
-  height: 30rem;
 }
 
 .productItem {
-  display: inline-block;
-  width: 23.5%;
+  width: 32%;
 }
 
 .productItem img {
   width: 100%;
+  padding: 5% 0;
 }
 
 .productItem p {
   color: #bcc2d8;
   font-style: italic;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
