@@ -1,0 +1,26 @@
+.container {
+  width: 70%;
+}
+
+.productsList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2%;
+  height: 30rem;
+}
+
+.productItem {
+  display: inline-block;
+  width: 23.5%;
+}
+
+.productItem img {
+  width: 100%;
+}
+
+.productItem p {
+  color: #bcc2d8;
+  font-style: italic;
+}

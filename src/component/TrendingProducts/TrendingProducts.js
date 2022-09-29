@@ -30,7 +30,6 @@ const TrendingProducts = (props) => {
   //Lấy dữ liệu sản phẩm cần popup
   const product = data.find((product) => product._id.$oid === productID);
 
-  console.log(product);
   useEffect(() => {
     fetch(
       "https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74"
@@ -38,7 +37,7 @@ const TrendingProducts = (props) => {
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
-  console.log(data);
+
   return (
     <div className={classes.container}>
       {isPopup && (
