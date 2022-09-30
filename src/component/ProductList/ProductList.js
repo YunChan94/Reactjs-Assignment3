@@ -6,8 +6,8 @@ import classes from "./ProductList.module.css";
 const ProductList = (props) => {
   const navigate = useNavigate();
   //chuyển đến trang Detail
-  const gotoDetail = () => {
-    navigate("detail/:productId");
+  const gotoDetail = (event) => {
+    navigate(`/detail/${event.target.id}`);
   };
 
   console.log("props.dataByCategory", props.dataByCategory);

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import classes from "./ShopPage.module.css";
-import CategoriesList from "../component/CategoriesList/CategoriesList";
-import ProductList from "../component/ProductList/ProductList";
+import CategoriesList from "../../component/CategoriesList/CategoriesList";
+import ProductList from "../../component/ProductList/ProductList";
 
 const ShopPage = () => {
   // Lấy dữ liệu từ server
@@ -15,7 +15,6 @@ const ShopPage = () => {
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
-  console.log("data", data);
 
   let productByCategory;
   // Lấy dữ liệu categories
