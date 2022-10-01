@@ -1,19 +1,18 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartFlatbed, faUser } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   return (
     <div className={classes.container}>
       <ul>
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to=""
+            to="/"
           >
             Home
           </NavLink>
@@ -21,7 +20,7 @@ const Navbar = () => {
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to="shop"
+            to="/shop"
           >
             Shop
           </NavLink>
@@ -32,7 +31,7 @@ const Navbar = () => {
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to="cart"
+            to="/cart"
           >
             <FontAwesomeIcon icon={faCartFlatbed} className={classes.icon} />
             <span>Cart</span>
@@ -41,7 +40,7 @@ const Navbar = () => {
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to="login"
+            to="/login"
           >
             <FontAwesomeIcon icon={faUser} className={classes.icon} />
             <span>Login</span>

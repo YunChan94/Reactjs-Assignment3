@@ -26,6 +26,8 @@ const DetailPage = (props) => {
   const relateProduct = props.data.filter(
     (item) => item.category === product.category && item._id.$oid !== productId
   );
+
+  //
   return (
     <div>
       <div className={classes.container}>
@@ -51,7 +53,7 @@ const DetailPage = (props) => {
           <p>{product.long_desc}</p>
         </div>
         <div>
-          <h3>RELATE PRODUCT</h3>
+          <h3>RELATE PRODUCTS</h3>
           {relateProduct && (
             <div className={classes.productsList}>
               {relateProduct.map((item) => (

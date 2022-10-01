@@ -1,0 +1,42 @@
+.container {
+  background-image: url("../../../public/Images/banner1.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  color: grey;
+  padding: 5% 0;
+}
+
+.signUpContainer {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 5%;
+  justify-content: center;
+}
+
+.signUpContainer a {
+  text-decoration: none;
+  color: rgb(0, 204, 255);
+}
+
+.formcontrol {
+  width: 100%;
+}
+
+.formcontrol input {
+  width: 90%;
+  padding: 5%;
+  border-color: rgb(185, 179, 179);
+  margin: 0;
+}
+
+.formcontrol button {
+  width: 100%;
+  margin: 2% 0;
+  padding: 5%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

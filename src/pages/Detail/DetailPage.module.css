@@ -65,22 +65,3 @@
   color: #bcc2d8;
   font-style: italic;
 }
-
-/* 
-.addBtn {
-  display: flex;
-  justify-content: space-around;
-  padding: 0.5rem;
-  background-color: #383838;
-  color: white;
-  cursor: pointer;
-  margin-top: 3%;
-} */
-/* 
-.Btn {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 5%;
-  padding-right: 10%;
-  gap: 2%;
-} */
