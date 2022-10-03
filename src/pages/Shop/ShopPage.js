@@ -28,7 +28,6 @@ const ShopPage = () => {
       productByCategory = data.filter((item) => item.category === category);
       setProducts(productByCategory);
     }
-    console.log("productByCategory", productByCategory);
   };
 
   return (

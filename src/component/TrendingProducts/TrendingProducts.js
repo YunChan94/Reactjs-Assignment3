@@ -16,6 +16,17 @@ const TrendingProducts = (props) => {
   const dispatch = useDispatch();
   const isPopup = useSelector((state) => state.popup.isPopup);
 
+  useEffect(() => {
+    fetch(
+      "https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        // setData(data);
+        setData(data);
+      });
+  }, []);
+
   const showPopupHandler = (event) => {
     dispatch(popupActions.showPopup());
 
@@ -29,16 +40,6 @@ const TrendingProducts = (props) => {
 
   //Lấy dữ liệu sản phẩm cần popup
   const product = data.find((product) => product._id.$oid === productID);
-
-  useEffect(() => {
-    fetch(
-      "https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
 
   return (
     <div className={classes.container}>

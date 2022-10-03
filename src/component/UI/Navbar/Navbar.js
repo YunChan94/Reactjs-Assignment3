@@ -13,6 +13,7 @@ const Navbar = () => {
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
             to="/"
+            end
           >
             Home
           </NavLink>
