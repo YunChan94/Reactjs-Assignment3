@@ -7,7 +7,7 @@
   padding: 5% 0;
 }
 
-.signUpContainer {
+.signInContainer {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@
   justify-content: center;
 }
 
-.signUpContainer a {
+.signInContainer a {
   text-decoration: none;
   color: rgb(0, 204, 255);
 }

@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import popupReducer from "./popup";
-import productDataReducer from "./productData";
+import loginReducer from "./login";
+import cartReducer from "./cart";
 const store = configureStore({
-  reducer: { popup: popupReducer, productData: productDataReducer },
+  reducer: { popup: popupReducer, login: loginReducer, cart: cartReducer },
 });
 
 export default store;

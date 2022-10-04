@@ -22,11 +22,17 @@
 
 .container a:hover,
 .container a:active,
-.container a.active {
+.container a.active,
+.container span:hover {
   color: rgba(234, 200, 103, 255);
 }
 
-.icon {
+.container span {
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.container span:hover .icon {
   color: grey;
   margin-right: 0.2rem;
 }
