@@ -1,6 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { deleteFromStorage } from "../lib/storage";
-const initialLoginState = { isLogin: false };
+import { deleteFromStorage, getFromStorage } from "../lib/storage";
+
+// Kiểm tra dữ liệu currentUser xem có đăng nhập chưa
+const currentUser = getFromStorage("currentUser")
+  ? getFromStorage("currentUser")
+  : null;
+
+let initialLoginState;
+if (currentUser) {
+  initialLoginState = { isLogin: true };
+} else {
+  initialLoginState = { isLogin: false };
+}
 
 const loginSlice = createSlice({
   name: "login",

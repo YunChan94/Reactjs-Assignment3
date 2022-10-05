@@ -13,19 +13,24 @@ const ShopPage = () => {
       "https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74"
     )
       .then((response) => response.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        setData(data);
+
+        // Mặc định ban đầu vào trang shop có category = all
+        setProducts(data);
+      });
   }, []);
 
-  let productByCategory;
   // Lấy dữ liệu categories
   const getCategoryHandler = (category) => {
     //Trường hợp chọn all thì sẽ hiển thị đầy đủ product
     if (category === "all") {
-      productByCategory = data;
-      setProducts(productByCategory);
+      setProducts(data);
     } else {
       // Lọc product dựa trên category
-      productByCategory = data.filter((item) => item.category === category);
+      const productByCategory = data.filter(
+        (item) => item.category === category
+      );
       setProducts(productByCategory);
     }
   };

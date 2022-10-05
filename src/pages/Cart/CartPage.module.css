@@ -1,0 +1,51 @@
+.banner {
+  background-color: rgba(246, 249, 246, 255);
+  padding: 4rem;
+}
+
+.container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.container h3 {
+  font-style: italic;
+}
+
+.carttotal {
+  width: 20%;
+  background-color: rgba(246, 249, 246, 255);
+  padding: 5%;
+  order: 2;
+}
+
+.total {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-style: italic;
+  border-bottom: grey solid 1px;
+}
+
+.coupon {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.coupon button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.coupon button:hover {
+  color: bisque;
+}
+
+.coupon input {
+  width: 100%;
+}

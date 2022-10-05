@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { loginActions } from "../../../store/login";
 import { useDispatch, useSelector } from "react-redux";
 import { getFromStorage } from "../../../lib/storage";
@@ -9,8 +9,9 @@ import { faCartFlatbed, faUser } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
-  const dipatch = useDispatch();
+  const dispatch = useDispatch();
   const isLogin = useSelector((state) => state.login.isLogin);
+  const navigate = useNavigate();
   // Đang ở trạng thái đăng nhập
   // Lấy dữ liệu currentUser
   const currentUser = getFromStorage("currentUser")
@@ -19,11 +20,12 @@ const Navbar = () => {
 
   // setCurrentUser(user);
   const logoutHandler = () => {
-    dipatch(loginActions.logout());
-    console.log("logout");
-    // cập nhật lại currentUser
+    dispatch(loginActions.logout());
+
+    // Chuyển đến trang login
+    navigate("/login");
   };
-  console.log(currentUser);
+
   return (
     <div className={classes.container}>
       <ul>
@@ -67,7 +69,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         )}
-        {currentUser && (
+        {isLogin && (
           <li>
             <FontAwesomeIcon icon={faUser} className={classes.icon} />
             <span>{currentUser.name}▼</span>

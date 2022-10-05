@@ -1,0 +1,46 @@
+.cartItemcontainer {
+  width: 65%;
+  text-align: center;
+  border-bottom: solid rgba(246, 249, 246, 255);
+  order: 1;
+}
+
+.title {
+  background-color: rgba(246, 249, 246, 255);
+}
+
+.cartItem td > img {
+  width: 50%;
+}
+
+.cartItem td > button {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+
+.Btn {
+  background-color: rgba(246, 249, 246, 255);
+  width: 65%;
+  order: 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.Btn button {
+  border: none;
+  background-color: rgba(246, 249, 246, 255);
+  padding: 2%;
+  cursor: pointer;
+}
+
+.Btn button:hover {
+  border: solid black 1px;
+  font-weight: bolder;
+}
+
+.Btn a {
+  text-decoration: none;
+  color: black;
+}
