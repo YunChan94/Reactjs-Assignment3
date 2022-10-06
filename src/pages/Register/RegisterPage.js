@@ -65,6 +65,9 @@ const RegisterPage = () => {
     // Lưu vào local Storage
     saveToStorage("userArr", userArr);
 
+    // Thông báo đăng ký thành công
+    alert("Register success!");
+
     // Chuyển đến trang login
     navigate("/login");
   };

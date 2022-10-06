@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import classes from "./CartItem.module.css";
 
-const CartItem = () => {
+const CartItem = (props) => {
   return (
     <Fragment>
       <table className={classes.cartItemcontainer}>
@@ -17,27 +17,33 @@ const CartItem = () => {
           <th>TOTAL</th>
           <th>REMOVE</th>
         </tr>
-        <tr className={classes.cartItem}>
-          <td>
-            <img src="./Images/product_1.png" alt="" />
-          </td>
-          <td>name</td>
-          <td style={{ color: "grey", fontStyle: "italic" }}>price</td>
-          <td>
-            <button>◀</button>
-            <span>1</span>
-            <button>▶</button>
-          </td>
-          <td style={{ color: "grey", fontStyle: "italic" }}>10.000.000</td>
-          <td>
-            <button>
-              <FontAwesomeIcon
-                icon={faTrashCan}
-                style={{ color: "grey", fontStyle: "italic" }}
-              />
-            </button>
-          </td>
-        </tr>
+        {props.listCart.map((item) => (
+          <tr className={classes.cartItem} id={item._id.$oid}>
+            <td>
+              <img src={item.img1} alt="" />
+            </td>
+            <td>{item.name}</td>
+            <td
+              style={{ color: "grey", fontStyle: "italic" }}
+            >{`${item.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",")} VND`}</td>
+            <td>
+              <button>◀</button>
+              <span>{item.amount}</span>
+              <button>▶</button>
+            </td>
+            <td style={{ color: "grey", fontStyle: "italic" }}>{`${(
+              item.price * item.amount
+            ).replace(/\B(?=(\d{3})+(?!\d))/g, ",")} VND`}</td>
+            <td>
+              <button>
+                <FontAwesomeIcon
+                  icon={faTrashCan}
+                  style={{ color: "grey", fontStyle: "italic" }}
+                />
+              </button>
+            </td>
+          </tr>
+        ))}
       </table>
       <div className={classes.Btn}>
         <button>

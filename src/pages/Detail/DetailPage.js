@@ -1,8 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
+import { cartActions } from "../../store/cart";
+import { useDispatch, useSelector } from "react-redux";
 
 import classes from "./DetailPage.module.css";
 const DetailPage = () => {
+  const dispatch = useDispatch();
+  const listCart = useSelector((state) => state.cart.listCart);
+  // Lấy dữ liệu số lượng item add vào cart
+  const quanlityRef = useRef();
+
   // Lấy dữ liệu từ server
   const [product, setProduct] = useState(null);
   const [relateProduct, setRelateProduct] = useState([]);
@@ -20,7 +27,6 @@ const DetailPage = () => {
           (product) => product._id.$oid === productId
         );
         setProduct(productFound);
-        console.log("product", product);
 
         // Tìm sản phẩm có cùng category
         const relateProductFound = data.filter(
@@ -32,9 +38,19 @@ const DetailPage = () => {
       });
   }, []);
 
-  console.log("productId", productId);
+  const addItemToCartHandler = (event) => {
+    event.preventDefault();
+    const productAmount = quanlityRef.current.value;
+    console.log(productAmount);
+    // Thêm vào giỏ hàng
+    dispatch(
+      cartActions.addCart({ item: product, amount: Number(productAmount) })
+    );
 
-  console.log(relateProduct);
+    console.log(listCart);
+    // Cập nhật dữ liệu
+    dispatch(cartActions.updateCart());
+  };
   return (
     <div>
       {product && (
@@ -52,8 +68,14 @@ const DetailPage = () => {
             <p style={{ color: "black", fontWeight: "bolder" }}>CATEGORY:</p>
             <p>{product.category}</p>
             <div className={classes.inputForm}>
-              <form>
-                <input type="number" placeholder="QUANTITY" step="1" min="1" />
+              <form onSubmit={addItemToCartHandler}>
+                <input
+                  type="number"
+                  placeholder="QUANTITY"
+                  step="1"
+                  min="1"
+                  ref={quanlityRef}
+                />
                 <button className={classes.addBtn}>Add to Cart</button>
               </form>
             </div>
