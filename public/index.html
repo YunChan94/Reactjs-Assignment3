@@ -24,6 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
     <title>React App</title>
   </head>
   <body>
@@ -40,5 +41,31 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script
+      type="text/javascript"
+      src="https://popupsmart.com/freechat.js"
+    ></script>
+    <script>
+      window.start.init({
+        title: "This is Boutique!",
+        message: "May I help you?",
+        color: "#1C86FA",
+        position: "right",
+        placeholder: "Enter your message",
+        withText: "Write with",
+        viaWhatsapp: "Or write us directly via Whatsapp",
+        gty: "Go to your",
+        awu: "and write us",
+        connect: "Connect now",
+        button: "Contact with us",
+        device: "everywhere",
+        services: [
+          { name: "messenger", content: null },
+          { name: "whatsapp", content: null },
+          { name: "line", content: null },
+          { name: "instagram", content: null },
+        ],
+      });
+    </script>
   </body>
 </html>
