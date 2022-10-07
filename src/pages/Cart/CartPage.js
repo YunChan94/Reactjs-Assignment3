@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGift } from "@fortawesome/free-solid-svg-icons";
-import { cartActions } from "../../store/cart";
-import { useSelector, useDispatch } from "react-redux";
+
+import { useSelector } from "react-redux";
 import CartItem from "../../component/CartItem/CartItem";
 import classes from "./CartPage.module.css";
 const CartPage = () => {
-  const dispatch = useDispatch();
   const isLogin = useSelector((state) => state.login.isLogin);
   const listCart = useSelector((state) => state.cart.listCart);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
@@ -24,7 +23,7 @@ const CartPage = () => {
       )}
       {isLogin && (
         <div className={classes.container}>
-          {listCart && <CartItem listCart={listCart} />}
+          {listCart && <CartItem />}
           <div className={classes.carttotal}>
             <h3>CART TOTAL</h3>
             <div className={classes.total}>
@@ -35,19 +34,21 @@ const CartPage = () => {
                   fontSize: "smaller",
                 }}
               >
-                {totalAmount
-                  ? totalAmount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                  : 0}{" "}
-                VND
+                {`${
+                  listCart
+                    ? String(totalAmount).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    : 0
+                } VND`}
               </span>
             </div>
             <div className={classes.total}>
               <span>TOTAL</span>
               <span>
-                {totalAmount
-                  ? totalAmount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                  : 0}{" "}
-                VND
+                {`${
+                  listCart
+                    ? String(totalAmount).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    : 0
+                } VND`}
               </span>
             </div>
             <div className={classes.coupon}>

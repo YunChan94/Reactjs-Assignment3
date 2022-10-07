@@ -8,7 +8,7 @@ const FooterItem = (props) => {
       <h3>{props.name}</h3>
       <ul>
         {props.linkname.map((item) => (
-          <li>
+          <li id={item}>
             <a href="#" id={item}>
               {item}
             </a>

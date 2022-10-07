@@ -41,15 +41,20 @@ const DetailPage = () => {
   const addItemToCartHandler = (event) => {
     event.preventDefault();
     const productAmount = quanlityRef.current.value;
-    console.log(productAmount);
+    if (!productAmount) {
+      alert("You need add quanlity of product!");
+      return;
+    }
     // Thêm vào giỏ hàng
     dispatch(
       cartActions.addCart({ item: product, amount: Number(productAmount) })
     );
 
-    console.log(listCart);
     // Cập nhật dữ liệu
     dispatch(cartActions.updateCart());
+
+    //Thông báo đã bỏ sản phẩm vào giỏ hàng thành công
+    alert("The product is added to your cart");
   };
   return (
     <div>
