@@ -66,7 +66,7 @@ const TrendingProducts = (props) => {
               id={item._id.$oid}
             />
             <h5>{item.name}</h5>
-            <p>{`${item.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",")} VND`}</p>
+            <p>{`${item.price.replace(/\B(?=(\d{3})+(?!\d))/g, ".")} VND`}</p>
           </div>
         ))}
       </div>

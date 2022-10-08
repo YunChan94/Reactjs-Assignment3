@@ -7,3 +7,7 @@
   color: grey;
   text-decoration: none;
 }
+
+.footer_item li {
+  margin: 0.5rem 0;
+}

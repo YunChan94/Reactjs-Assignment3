@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import classes from "./CategoriesList.module.css";
 
@@ -7,6 +7,7 @@ const CategoriesList = (props) => {
   const categoryChooseHandler = (event) => {
     props.onCategory(event.target.id);
   };
+
   return (
     <div className={classes.container}>
       <div className={classes.categories}>

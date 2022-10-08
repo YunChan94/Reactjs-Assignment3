@@ -10,7 +10,6 @@ const ProductList = (props) => {
     navigate(`/detail/${event.target.id}`);
   };
 
-  console.log("props.dataByCategory", props.dataByCategory);
   return (
     <div className={classes.container}>
       <div className={classes.productsList}>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
 import { cartActions } from "../../store/cart";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import classes from "./DetailPage.module.css";
 const DetailPage = () => {
   const dispatch = useDispatch();
-  const listCart = useSelector((state) => state.cart.listCart);
+
+  const [isShowDesc, setIsShowDesc] = useState(false);
+
   // Lấy dữ liệu số lượng item add vào cart
   const quanlityRef = useRef();
 
@@ -41,10 +43,7 @@ const DetailPage = () => {
   const addItemToCartHandler = (event) => {
     event.preventDefault();
     const productAmount = quanlityRef.current.value;
-    if (!productAmount) {
-      alert("You need add quanlity of product!");
-      return;
-    }
+
     // Thêm vào giỏ hàng
     dispatch(
       cartActions.addCart({ item: product, amount: Number(productAmount) })
@@ -56,6 +55,12 @@ const DetailPage = () => {
     //Thông báo đã bỏ sản phẩm vào giỏ hàng thành công
     alert("The product is added to your cart");
   };
+
+  // Ẩn hiện decription
+  const toggleDescription = () => {
+    setIsShowDesc(!isShowDesc);
+  };
+
   return (
     <div>
       {product && (
@@ -80,15 +85,20 @@ const DetailPage = () => {
                   step="1"
                   min="1"
                   ref={quanlityRef}
+                  required
                 />
                 <button className={classes.addBtn}>Add to Cart</button>
               </form>
             </div>
           </div>
           <div className={classes.description}>
-            <button>DESCRIPTION</button>
-            <h3>PRODUCT DESCRIPTION</h3>
-            <p>{product.long_desc}</p>
+            <button onClick={toggleDescription}>DESCRIPTION</button>
+            {isShowDesc && (
+              <span>
+                <h3>PRODUCT DESCRIPTION</h3>
+                <p>{product.long_desc}</p>
+              </span>
+            )}
           </div>
           <div>
             <h3>RELATE PRODUCTS</h3>
