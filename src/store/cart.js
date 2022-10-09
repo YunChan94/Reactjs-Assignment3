@@ -81,16 +81,12 @@ const cartSlice = createSlice({
     deleteCart(state, payload) {
       const id = payload.payload.id;
       const isDelete = payload.payload.isDelete;
-      console.log(payload);
+
       // Check sản phẩm cùng tên có tồn tại chưa
       const existingCartItemIndex = state.listCart.findIndex(
         (product) => product._id.$oid === id
       );
       const existingCartItem = state.listCart[existingCartItemIndex];
-
-      // Tính lại giá trị total
-      const updatedTotalAmount =
-        state.totalAmount - Number(existingCartItem.price);
 
       let updatedListCart;
 
@@ -112,6 +108,11 @@ const cartSlice = createSlice({
         // Cập nhật giá trị mới vào array items của context
         updatedListCart[existingCartItemIndex] = updatedItem;
       }
+
+      // Tính lại giá trị total
+      const updatedTotalAmount = updatedListCart
+        .map((item) => Number(item.price) * item.amount)
+        .reduce((total, currentVal) => total + currentVal);
       return {
         listCart: updatedListCart,
         totalAmount: updatedTotalAmount,

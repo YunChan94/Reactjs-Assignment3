@@ -8,7 +8,8 @@
   padding-left: 1rem;
 }
 
-.container p:hover {
+.container p:hover,
+.containerp:active {
   color: rgba(234, 200, 103, 255);
   cursor: pointer;
 }

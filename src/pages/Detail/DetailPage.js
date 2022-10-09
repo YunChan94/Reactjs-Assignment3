@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
 import { cartActions } from "../../store/cart";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import classes from "./DetailPage.module.css";
 const DetailPage = () => {
   const dispatch = useDispatch();
-
+  const isLogin = useSelector((state) => state.login.isLogin);
   const [isShowDesc, setIsShowDesc] = useState(false);
 
   // Lấy dữ liệu số lượng item add vào cart
@@ -42,6 +42,12 @@ const DetailPage = () => {
 
   const addItemToCartHandler = (event) => {
     event.preventDefault();
+    // Yêu cầu đăng nhập mới thêm vào giỏ hàng
+    if (isLogin === false) {
+      alert("Please login for adding product to Cart!");
+      return;
+    }
+
     const productAmount = quanlityRef.current.value;
 
     // Thêm vào giỏ hàng
