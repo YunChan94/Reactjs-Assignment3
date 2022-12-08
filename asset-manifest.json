@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Reactjs-Assignment3/static/css/main.43169144.css",
+    "main.js": "/Reactjs-Assignment3/static/js/main.bbc48214.js",
+    "static/css/247.a48924a6.chunk.css": "/Reactjs-Assignment3/static/css/247.a48924a6.chunk.css",
+    "static/js/247.c4ce04d3.chunk.js": "/Reactjs-Assignment3/static/js/247.c4ce04d3.chunk.js",
+    "static/css/89.2b1628af.chunk.css": "/Reactjs-Assignment3/static/css/89.2b1628af.chunk.css",
+    "static/js/89.0d0ace79.chunk.js": "/Reactjs-Assignment3/static/js/89.0d0ace79.chunk.js",
+    "static/css/679.43a9f6fe.chunk.css": "/Reactjs-Assignment3/static/css/679.43a9f6fe.chunk.css",
+    "static/js/679.ef6e4de1.chunk.js": "/Reactjs-Assignment3/static/js/679.ef6e4de1.chunk.js",
+    "static/css/260.fe4a75d3.chunk.css": "/Reactjs-Assignment3/static/css/260.fe4a75d3.chunk.css",
+    "static/js/260.1a33dc1b.chunk.js": "/Reactjs-Assignment3/static/js/260.1a33dc1b.chunk.js",
+    "static/css/882.019ae2ad.chunk.css": "/Reactjs-Assignment3/static/css/882.019ae2ad.chunk.css",
+    "static/js/882.77680619.chunk.js": "/Reactjs-Assignment3/static/js/882.77680619.chunk.js",
+    "static/css/326.11b4be1e.chunk.css": "/Reactjs-Assignment3/static/css/326.11b4be1e.chunk.css",
+    "static/js/326.dfd418a0.chunk.js": "/Reactjs-Assignment3/static/js/326.dfd418a0.chunk.js",
+    "static/css/997.b6140e4b.chunk.css": "/Reactjs-Assignment3/static/css/997.b6140e4b.chunk.css",
+    "static/js/997.b66327e2.chunk.js": "/Reactjs-Assignment3/static/js/997.b66327e2.chunk.js",
+    "static/media/banner1.jpg": "/Reactjs-Assignment3/static/media/banner1.4a22881c941f7b645fa8.jpg",
+    "index.html": "/Reactjs-Assignment3/index.html",
+    "main.43169144.css.map": "/Reactjs-Assignment3/static/css/main.43169144.css.map",
+    "main.bbc48214.js.map": "/Reactjs-Assignment3/static/js/main.bbc48214.js.map",
+    "247.a48924a6.chunk.css.map": "/Reactjs-Assignment3/static/css/247.a48924a6.chunk.css.map",
+    "247.c4ce04d3.chunk.js.map": "/Reactjs-Assignment3/static/js/247.c4ce04d3.chunk.js.map",
+    "89.2b1628af.chunk.css.map": "/Reactjs-Assignment3/static/css/89.2b1628af.chunk.css.map",
+    "89.0d0ace79.chunk.js.map": "/Reactjs-Assignment3/static/js/89.0d0ace79.chunk.js.map",
+    "679.43a9f6fe.chunk.css.map": "/Reactjs-Assignment3/static/css/679.43a9f6fe.chunk.css.map",
+    "679.ef6e4de1.chunk.js.map": "/Reactjs-Assignment3/static/js/679.ef6e4de1.chunk.js.map",
+    "260.fe4a75d3.chunk.css.map": "/Reactjs-Assignment3/static/css/260.fe4a75d3.chunk.css.map",
+    "260.1a33dc1b.chunk.js.map": "/Reactjs-Assignment3/static/js/260.1a33dc1b.chunk.js.map",
+    "882.019ae2ad.chunk.css.map": "/Reactjs-Assignment3/static/css/882.019ae2ad.chunk.css.map",
+    "882.77680619.chunk.js.map": "/Reactjs-Assignment3/static/js/882.77680619.chunk.js.map",
+    "326.11b4be1e.chunk.css.map": "/Reactjs-Assignment3/static/css/326.11b4be1e.chunk.css.map",
+    "326.dfd418a0.chunk.js.map": "/Reactjs-Assignment3/static/js/326.dfd418a0.chunk.js.map",
+    "997.b6140e4b.chunk.css.map": "/Reactjs-Assignment3/static/css/997.b6140e4b.chunk.css.map",
+    "997.b66327e2.chunk.js.map": "/Reactjs-Assignment3/static/js/997.b66327e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43169144.css",
+    "static/js/main.bbc48214.js"
+  ]
+}
